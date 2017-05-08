@@ -1,68 +1,37 @@
-# chrome-path-cli [![Build Status](https://travis-ci.org/ragingwind/chrome-path-cli.svg?branch=master)](https://travis-ci.org/ragingwind/chrome-path-cli)
+# chrome-path-cli
 
-> Getting path for chromium / chrome, it returns paths of chromium / chrome installed on your system
-
+> Getting path for chromium/chrome, it returns paths of chromium/chrome installed on your system
 
 ## Install
 
-```
-$ npm install --save chrome-path-cli
-```
-
-
-## Usage
-
-```js
-const chromePathCli = require('chrome-path-cli');
-
-chromePathCli('unicorns');
-//=> 'unicorns & rainbows'
-```
-
-
-## API
-
-### chromePathCli(input, [options])
-
-#### input
-
-Type: `string`
-
-Lorem ipsum.
-
-#### options
-
-##### foo
-
-Type: `boolean`<br>
-Default: `false`
-
-Lorem ipsum.
-
-
-## CLI
-
-```
+```sh
 $ npm install --global chrome-path-cli
 ```
 
+## Usage
+
+```sh
+# path of chromes and output json
+$ chrome-path --json --chrome --canary --chromium
+{
+  "chrome": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "canary": "/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary",
+  "chromium": "/Applications/Chromium.app/Contents/MacOS/Chromium"
+}
+
+# path of chrome canary only
+$ chrome-path --chrome --canary --chromium
+/Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary
+/Applications/Chromium.app/Contents/MacOS/Chromium
+
+# chrome is default. output as json
+$ chrome-path --json
+
+# and more
+$ chrome-path --help
 ```
-$ chrome-path-cli --help
-
-  Usage
-    chrome-path-cli [input]
-
-  Options
-    --foo  Lorem ipsum [Default: false]
-
-  Examples
-    $ chrome-path-cli
-    unicorns & rainbows
-    $ chrome-path-cli ponies
-    ponies & rainbows
-```
-
 
 ## License
 
-MIT © [ragingwind](http://ragingwind.me)
+MIT © [Jimmy Moon](http://ragingwind.me)
