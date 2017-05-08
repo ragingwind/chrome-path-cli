@@ -5,7 +5,7 @@
 ## Install
 
 ```sh
-$ npm install --global chrome-path-cli
+$ npm install --global @moonandyou/chrome-path-cli
 ```
 
 ## Usage
